@@ -6,7 +6,7 @@ app = Flask(__name__, static_folder="fe/dist/assets",
 
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
-def hello_world():
+def hello_world(path):
     return render_template("index.html")
 
 
